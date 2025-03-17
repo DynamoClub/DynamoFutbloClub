@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Deportivo Dynamo | Juadores Destacados</title>
+    <link rel="stylesheet" href="./css/jugadoresdestacados.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./Images/logo.webp">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Inicio Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./Images/logo.webp" alt="Logo del Club">
+    </div>
+    <ul class="nav-menu">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./noticias.html">Noticias</a></li>
+        <li class="dropdown">
+            <a href="#acerca" class="dropdown-btn">Acerca de Nosotros ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./Quienes_Somos.html">Quiénes Somos</a></li>
+                <li><a href="./Sedes_Dynamo.html">Sedes</a></li>
+                <li><a href="./Formadores.html">Formadores</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#el-club" class="dropdown-btn">El Club ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./categorias.html">Categorías</a></li>
+                <li><a href="./torneos.html">Torneos y Competencias</a></li>
+                <li><a href="./jugadoresdestacados.html">Jugadores Destacados</a></li>
+            </ul>
+        </li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+</nav>
+<!-- Fin Navbar -->
+     
+  <!--(Hero Section Inicio) -->
+  <section class="hero-section">
+    <div class="hero-content">
+    </div>
+  </section>
+  <!--(Hero Section)Fin -->
+
+  <section class="jugadores-destacados-section">
+    <h2 class="jugadores-destacados-titulo">Jugadores Destacados</h2>
+    <p class="jugadores-destacados-descripcion">
+        En el <strong>Club Deportivo Dynamo</strong>, estamos orgullosos de ser una cuna de grandes talentos que han llevado en alto nuestro nombre. Este es nuestro cuadro de honor, donde destacamos a aquellos jugadores que, gracias a su esfuerzo, dedicación y pasión, han logrado ciclos con la <strong>Selección Colombia</strong> y han sido contactados por equipos de primera y segunda división para continuar su formación profesional. 
+        Estos jóvenes representan el espíritu y la excelencia que caracterizan a nuestro club.
+    </p>
+</section>
+
+  <!--(Jugadores Descatados)Inicio -->
+  <section id="staff-equipo" class="staff-equipo-section">
+    <!-- Título -->
+    <h2 class="staff-titulo">Cuadro de Honor</h2>
+    <p class="staff-descripcion">
+        Celebramos a nuestros <strong>Jugadores Destacados</strong>, verdaderos trofeos del alcance y evolución del <strong>Club Deportivo Dynamo</strong>. 
+        Cada uno de ellos ha dejado una huella imborrable en nuestra historia, demostrando que con esfuerzo y dedicación, los sueños se convierten en realidad. 
+        Conoce a estos talentos que representan el éxito de nuestro proyecto formativo y su impacto en el fútbol nacional e internacional.
+    </p>
+
+    <!-- Filtros -->
+    <div class="staff-filtros">
+        <button class="filtro-btn" data-filter="all">Todos</button>
+        <button class="filtro-btn" data-filter="arquero">Arqueros</button>
+        <button class="filtro-btn" data-filter="defensa">Defensas</button>
+        <button class="filtro-btn" data-filter="mediocampo">Mediocampista</button>
+        <button class="filtro-btn" data-filter="delantero">Delantero</button>
+    </div>
+
+    <!-- Tarjetas -->
+    <div class="staff-grid">
+        <!-- Ejemplo de tarjeta -->
+        <div class="staff-card mediocampo">
+            <img src="./jugadores/DESTACADOS/Johan Felipe Zuñiga.webp" alt="Johan Felipe Zuñiga">
+            <h3>Johan Felipe Zuñiga</h3>
+            <p>Mediocampista</p>
+        </div>
+
+        <div class="staff-card mediocampo">
+            <img src="./jugadores/DESTACADOS/Julian Quevedo.webp" alt="Johan Felipe Zuñiga">
+            <h3>Julian Quevedo</h3>
+            <p>Mediocampista</p>
+        </div>
+
+    </div>
+</section>
+  <!--(Jugadores Descatados)Fin -->
+
+<!-- Modal -->
+<div id="modal-staff" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-info">
+            <img id="modal-image" src="" alt="">
+            <div class="modal-text">
+                <h3 id="modal-name"></h3>
+                <p id="modal-role"></p>
+                <p id="modal-description"></p>
+
+                <div class="modal-gallery">
+                    <!-- Las imágenes de la galería se cargarán dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <!--(Enviar Mensaje Tipo Formulario Inicio) --> 
+ <section id="formulario-whatsapp" class="formulario-section">
+    <h2>¿Quieres formar parte de la familia Dynamo?</h2>
+    <p>Completa la información y prepárate para escribirnos directamente por WhatsApp.</p>
+    
+    <form class="formulario-dynamo">
+        <div class="form-group">
+            <label for="nombre">Mi nombre es:</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="hijo">Quiero inscribir a mi hijo/a:</label>
+            <input type="text" id="hijo" placeholder="Nombre de tu hijo/a" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="number" id="categoria" placeholder="Año de nacimiento (Ej: 2010)" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="posicion">Su posición favorita en el campo es:</label>
+            <select id="posicion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Arquero">Arquero</option>
+                <option value="Defensa">Defensa</option>
+                <option value="Mediocampista">Mediocampista</option>
+                <option value="Delantero">Delantero</option>
+            </select>
+        </div>
+
+        <!-- Vista previa del mensaje -->
+        <div class="form-group vista-previa">
+            <label>Mensaje generado:</label>
+            <textarea id="mensaje-previa" readonly></textarea>
+        </div>
+
+        <!-- Botón de enviar mensaje -->
+        <button type="button" id="enviar-whatsapp">Enviar por WhatsApp</button>
+    </form>
+</section>
+ <!--(Enviar Mensaje Tipo Formulario Fin) --> 
+
+<!-- Footer Inicio -->
+<footer class="site-footer">
+    <div class="footer-background"></div>
+    <div class="footer-content">
+      <!-- Patrocinadores -->
+      <div class="footer-sponsors">
+        <h3 class="footer-title">Participaciones</h3>
+        <div class="sponsors-logos">
+          <img src="sponsors/ligavallecaucana.webp" alt="Liga Vallecaucana">
+          <img src="sponsors/torneolasamericas.webp" alt="Torneo Las Américas">
+          <img src="sponsors/copababu.webp" alt="Delicias Luku">
+          <img src="sponsors/bahiacocecer.webp" alt="Bahía Soccer">
+          <img src="sponsors/images.webp" alt="Fútbol Paz">
+          <img src="sponsors/babyfutbol.webp" alt="Baby Paz">
+        </div>
+      </div>
+  
+      <!-- Redes Sociales -->
+      <div class="footer-social">
+        <h3 class="footer-title">¡Síguenos en nuestras redes sociales!</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/dynamo.decordoba.1" target="_blank">
+            <img src="./Images/facebook.webp" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/club_deportivodynamo/" target="_blank">
+            <img src="./Images/instagram.webp" alt="Instagram">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Contacto -->
+      <div class="footer-contact">
+        <p>Correo: <a href="mailto:info@clubdynamo.com">info@clubdynamo.com</a></p>
+        <p>Teléfono: 312 67323778 - 312 6746823</p>
+        <p>Dirección: Ciudad Córdoba, Cali</p>
+      </div>
+  
+      <!-- Derechos Reservados -->
+      <div class="footer-bottom">
+        <p>© 2025 Club Deportivo Dynamo. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado por <a href="#">GhostRz</a>.</p>
+      </div>
+    </div>
+</footer>
+<!-- Footer Fin -->
+<script src="script.js"></script>
+
+
+
+<!-- Filtrar Inicio -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filtro-btn");
+    const cards = document.querySelectorAll(".staff-card");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            cards.forEach((card) => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+</script>
+<!-- Filtrar Fin -->
+
+<!-- Modal Funcionalidad Inicio -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const staffCards = document.querySelectorAll(".staff-card");
+        const modal = document.getElementById("modal-staff");
+        const modalImage = document.getElementById("modal-image");
+        const modalName = document.getElementById("modal-name");
+        const modalRole = document.getElementById("modal-role");
+        const modalDescription = document.getElementById("modal-description");
+        const closeModal = document.querySelector(".close");
+    
+        const staffData = {
+    "Johan Felipe Zuñiga": {
+        image: "./jugadores/DESTACADOS/Johan Felipe Zuñiga.webp",
+        role: "Jugador Destacado",
+        description: `Johan Felipe Zuñiga, nacido en 2007, es un talentoso jugador que formó parte del equipo Dynamo, destacándose por su dedicación y habilidades excepcionales en el campo. Durante su tiempo con Dynamo, Johan desarrolló una gran técnica, disciplina y amor por el juego.
+
+    Actualmente, Johan milita en las categorías menores del Deportivo Pasto, donde continúa su formación futbolística en la categoría U-17. Es un ejemplo del impacto que la filosofía y el trabajo formativo de Dynamo pueden tener en jóvenes con proyección profesional..`,
+
+    gallery: ["./jugadores/DESTACADOS/Johan Felipe Zuñiga1.webp"]
+    },
+
+    "Julian Quevedo": {
+    image: "./jugadores/DESTACADOS/Julian Quevedo.webp", // Ruta de la foto destacada del jugador
+    role: "Jugador Destacado",
+    description: `Julian Quevedo, es un talentoso delantero categoría 2010 que dejó una huella imborrable en el Club Deportivo Dynamo. Su paso por Dynamo estuvo marcado por su increíble capacidad goleadora y su dedicación al juego.
+
+    Actualmente, Julian forma parte de Fútbol Paz, donde continúa brillando como uno de los jóvenes talentos más prometedores. En el presente año, ha logrado dos Botines de Oro, destacando especialmente el obtenido con la Selección Valle. Además, su talento le ha valido una convocatoria al primer Microciclo de preparación con la Tricolor U-15.
+
+    Julian es un verdadero ejemplo del éxito que Dynamo busca inspirar en cada uno de sus deportistas.`,
+    gallery: [
+        "./jugadores/DESTACADOS/Julian Quevedo1.webp"]
+    },
+        };
+    
+        staffCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                const name = card.querySelector("h3").textContent;
+                const data = staffData[name];
+    
+                if (data) {
+                    modalImage.src = data.image;
+                    modalName.textContent = name;
+                    modalRole.textContent = data.role;
+                    modalDescription.textContent = data.description;
+    
+                    const gallery = modal.querySelector(".modal-gallery");
+                    gallery.innerHTML = "";
+                    data.gallery.forEach((imgSrc) => {
+                        const img = document.createElement("img");
+                        img.src = imgSrc;
+                        gallery.appendChild(img);
+                    });
+    
+                    modal.style.display = "block";
+                }
+            });
+        });
+    
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+    
+    
+    
+</script>
+<!-- Modal Funcionalidad Fin -->
+
+
+<!-- Galeria Modal Funcionalidad Inicio -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxClose = document.querySelector(".lightbox-close");
+    
+        // Evento para mostrar el lightbox al hacer clic en una imagen de la galería
+        document.addEventListener("click", (event) => {
+            // Verifica si el elemento clicado es una imagen dentro de la galería
+            if (event.target.tagName === "IMG" && event.target.closest(".modal-gallery")) {
+                const imgSrc = event.target.src; // Obtén la fuente de la imagen
+                lightboxImg.src = imgSrc;
+                lightbox.style.display = "flex";
+            }
+        });
+    
+        // Evento para cerrar el lightbox
+        lightboxClose.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+    
+        // Cerrar el lightbox al hacer clic fuera de la imagen
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    });
+    
+    
+</script>
+<!-- Galeria Modal Funcionalidad Fin -->
+
+<div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+</div>
+
+</body>
+</html>

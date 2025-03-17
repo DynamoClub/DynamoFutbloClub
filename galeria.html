@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Deportivo Dynamo | Galeria</title>
+    <link rel="stylesheet" href="./css/galeria.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./Images/logo.webp">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Inicio Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./Images/logo.webp" alt="Logo del Club">
+    </div>
+    <ul class="nav-menu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="./noticias.html">Noticias</a></li>
+        <li class="dropdown">
+            <a href="#acerca" class="dropdown-btn">Acerca de Nosotros ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./Quienes_Somos.html">Quiénes Somos</a></li>
+                <li><a href="./Sedes_Dynamo.html">Sedes</a></li>
+                <li><a href="./Formadores.html">Formadores</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#el-club" class="dropdown-btn">El Club ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./categorias.html">Categorías</a></li>
+                <li><a href="./torneos.html">Torneos y Competencias</a></li>
+                <li><a href="./jugadoresdestacados.html">Jugadores Destacados</a></li>
+            </ul>
+        </li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+</nav>
+<!-- Fin Navbar -->
+     
+  <!--(Hero Section Inicio) -->
+  <section class="hero-section">
+    <div class="hero-content">
+    </div>
+  </section>
+  <!--(Hero Section)Fin -->
+
+
+  <!--(Galeria Inicio) --> 
+  <section id="galeria" class="galeria-section">
+    <h2>Galería: Momentos Destacados</h2>
+    <p class="galeria-intro">
+        Descubre los mejores momentos del <strong>Club Deportivo Dynamo</strong> a través de nuestras imágenes. Desde entrenamientos hasta competiciones, esta galería captura la pasión, el esfuerzo y la alegría que define a nuestro equipo.
+    </p>
+    <div class="galeria-container">
+        <!-- Contenedor de imágenes -->
+        <div class="galeria-grid">
+            <!-- Ejemplo de imagen -->
+            <div class="galeria-item">
+                <img src="./galeria/1.webp" alt="Descripción de la imagen 1">
+            </div>
+            <div class="galeria-item">
+                <img src="./galeria/2.webp" alt="Descripción de la imagen 2">
+            </div>
+            <div class="galeria-item">
+                <img src="./galeria/3.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/4.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/5.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/6.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/7.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/8.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/9.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/10.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/11.webp" alt="Descripción de la imagen 3">
+            </div>
+
+            <div class="galeria-item">
+                <img src="./galeria/12.webp" alt="Descripción de la imagen 3">
+            </div>
+        </div>
+    </div>
+    <!-- Botón para cargar más imágenes -->
+    <div class="galeria-ver-mas">
+        <button id="ver-mas-btn">Ver Más</button>
+    </div>
+
+    <!-- Modal para ampliar la imagen -->
+    <div id="modal" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imagen-ampliada">
+    </div>
+</section>
+  <!--(Galeria Fin) --> 
+
+ <!--(Enviar Mensaje Tipo Formulario Inicio) --> 
+ <section id="formulario-whatsapp" class="formulario-section">
+    <h2>¿Quieres formar parte de la familia Dynamo?</h2>
+    <p>Completa la información y prepárate para escribirnos directamente por WhatsApp.</p>
+    
+    <form class="formulario-dynamo">
+        <div class="form-group">
+            <label for="nombre">Mi nombre es:</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="hijo">Quiero inscribir a mi hijo/a:</label>
+            <input type="text" id="hijo" placeholder="Nombre de tu hijo/a" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="number" id="categoria" placeholder="Año de nacimiento (Ej: 2010)" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="posicion">Su posición favorita en el campo es:</label>
+            <select id="posicion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Arquero">Arquero</option>
+                <option value="Defensa">Defensa</option>
+                <option value="Mediocampista">Mediocampista</option>
+                <option value="Delantero">Delantero</option>
+            </select>
+        </div>
+
+        <!-- Vista previa del mensaje -->
+        <div class="form-group vista-previa">
+            <label>Mensaje generado:</label>
+            <textarea id="mensaje-previa" readonly></textarea>
+        </div>
+
+        <!-- Botón de enviar mensaje -->
+        <button type="button" id="enviar-whatsapp">Enviar por WhatsApp</button>
+    </form>
+</section>
+ <!--(Enviar Mensaje Tipo Formulario Fin) --> 
+
+
+<!-- Footer Inicio -->
+<footer class="site-footer">
+    <div class="footer-background"></div>
+    <div class="footer-content">
+      <!-- Patrocinadores -->
+      <div class="footer-sponsors">
+        <h3 class="footer-title">Participaciones</h3>
+        <div class="sponsors-logos">
+          <img src="./sponsors/ligavallecaucana.webp" alt="Liga Vallecaucana">
+          <img src="./sponsors/torneolasamericas.webp" alt="Torneo Las Américas">
+          <img src="./sponsors/copababu.webp" alt="Delicias Luku">
+          <img src="./sponsors/bahiacocecer.webp" alt="Bahía Soccer">
+          <img src="./sponsors/images.webp" alt="Fútbol Paz">
+          <img src="./sponsors/babyfutbol.webp" alt="Baby Paz">
+        </div>
+      </div>
+  
+      <!-- Redes Sociales -->
+      <div class="footer-social">
+        <h3 class="footer-title">¡Síguenos en nuestras redes sociales!</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/dynamo.decordoba.1" target="_blank">
+            <img src="./Images/facebook.webp" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/club_deportivodynamo/" target="_blank">
+            <img src="./Images/instagram.webp" alt="Instagram">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Contacto -->
+      <div class="footer-contact">
+        <p>Correo: <a href="mailto:info@clubdynamo.com">info@clubdynamo.com</a></p>
+        <p>Teléfono: 312 67323778 - 312 6746823</p>
+        <p>Dirección: Ciudad Córdoba, Cali</p>
+      </div>
+  
+      <!-- Derechos Reservados -->
+      <div class="footer-bottom">
+        <p>© 2025 Club Deportivo Dynamo. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado por <a href="#">GhostRz</a>.</p>
+      </div>
+    </div>
+</footer>
+<!-- Footer Fin -->
+
+<!-- Galeria Inicio -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const imagenesIniciales = 6; // Número de imágenes iniciales
+        let imagenesCargadas = imagenesIniciales;
+
+        // Selector de elementos
+        const galeriaGrid = document.querySelector(".galeria-grid");
+        const verMasBtn = document.getElementById("ver-mas-btn");
+        const modal = document.getElementById("modal");
+        const modalImagen = document.getElementById("imagen-ampliada");
+        const cerrarModal = document.querySelector(".cerrar");
+
+        // Lista de imágenes adicionales
+        const imagenesAdicionales = [
+   "./galeria/13.webp",
+    "./galeria/14.webp",
+    "./galeria/15.webp",
+    "./galeria/16.webp",
+    "./galeria/17.webp",
+    "./galeria/18.webp",
+    "./galeria/19.webp",
+    "./galeria/20.webp",
+    "./galeria/21.webp",
+    "./galeria/22.webp",
+    "./galeria/23.webp",
+    "./galeria/24.webp",
+    "./galeria/25.webp",
+    "./galeria/26.webp",
+    "./galeria/27.webp",
+    "./galeria/28.webp",
+    "./galeria/29.webp",
+    "./galeria/30.webp",
+    "./jugadores/porteros/39.webp",
+            "./jugadores/porteros/42.webp",
+            "./jugadores/porteros/41.webp",
+            "./jugadores/porteros/46.webp",
+            "./jugadores/porteros/43.webp",
+            "./jugadores/porteros/2.webp",
+            "./jugadores/porteros/40.webp",
+            "./jugadores/porteros/1.webp",
+            "./jugadores/porteros/3.webp",
+        ];
+
+        // Función para cargar más imágenes
+        verMasBtn.addEventListener("click", function () {
+            if (imagenesCargadas < imagenesAdicionales.length + imagenesIniciales) {
+                const nuevasImagenes = imagenesAdicionales.slice(
+                    imagenesCargadas - imagenesIniciales,
+                    imagenesCargadas - imagenesIniciales + 3
+                );
+                nuevasImagenes.forEach((src) => {
+                    const div = document.createElement("div");
+                    div.classList.add("galeria-item");
+                    const img = document.createElement("img");
+                    img.src = src;
+                    div.appendChild(img);
+                    galeriaGrid.appendChild(div);
+
+                    // Agregar evento para ampliar imágenes
+                    img.addEventListener("click", function () {
+                        modal.style.display = "flex";
+                        modalImagen.src = this.src;
+                    });
+                });
+
+                imagenesCargadas += nuevasImagenes.length;
+
+                if (imagenesCargadas >= imagenesIniciales + imagenesAdicionales.length) {
+                    verMasBtn.style.display = "none"; // Oculta el botón si no hay más imágenes
+                }
+            }
+        });
+
+        // Ampliar imagen en el modal
+        document.querySelectorAll(".galeria-item img").forEach((img) => {
+            img.addEventListener("click", function () {
+                modal.style.display = "flex";
+                modalImagen.src = this.src;
+            });
+        });
+
+        // Cerrar el modal
+        cerrarModal.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        // Cerrar el modal al hacer clic fuera de la imagen
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+<!-- Galeria Fin -->
+
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Deportivo Dynamo | Contacto</title>
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./Images/logo.webp">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- Inicio Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./Images/logo.webp" alt="Logo del Club">
+    </div>
+    <ul class="nav-menu">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="./noticias.html">Noticias</a></li>
+        <li class="dropdown">
+            <a href="#acerca" class="dropdown-btn">Acerca de Nosotros ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./Quienes_Somos.html">Quiénes Somos</a></li>
+                <li><a href="./Sedes_Dynamo.html">Sedes</a></li>
+                <li><a href="./Formadores.html">Formadores</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#el-club" class="dropdown-btn">El Club ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./categorias.html">Categorías</a></li>
+                <li><a href="./torneos.html">Torneos y Competencias</a></li>
+                <li><a href="./jugadoresdestacados.html">Jugadores Destacados</a></li>
+            </ul>
+        </li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+</nav>
+<!-- Fin Navbar -->
+     
+
+  <!--(Hero Section Inicio) -->
+  <section class="hero-section">
+    <div class="hero-content">
+    </div>
+  </section>
+  <!--(Hero Section)Fin -->
+
+  <section class="contacto">
+    <div class="contacto-contenedor">
+      <!-- Introducción -->
+      <div class="contacto-intro">
+        <h3>¡Únete a nuestro equipo!</h3>
+        <p>
+          Si quieres formar parte de nuestro club, ya sea como una estrella en el campo o un pilar en el equipo técnico, completa el siguiente formulario y nos pondremos en contacto contigo.
+        </p>
+      </div>
+  
+      <!-- Formulario -->
+      <div class="contacto-formulario">
+        <h2>Contáctanos</h2>
+        <form id="formulario-contacto">
+          <!-- Nombre y Apellido -->
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa su nombre" min="0">
+          </div>
+          <div class="campo">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required placeholder="Ingresa su apellido" min="0">
+          </div>
+  
+          <!-- Asunto -->
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option value="inscripcion-jugador">Inscripción de Jugador</option>
+              <option value="grupo-tecnico">Grupo Técnico</option>
+            </select>
+          </div>
+  
+          <!-- Campos Dinámicos -->
+          <div id="dinamico-inscripcion" style="display: none;">
+            <div class="campo">
+              <label for="nombre-nino">Quiero inscribir a mi hijo/a:</label>
+              <input type="text" id="nombre-nino" name="nombre-nino" placeholder="Nombre de tu hijo/a" min="0">
+            </div>
+            <div class="campo">
+              <label for="categoria">Categoría</label>
+              <input type="number" id="categoria" name="categoria" placeholder="Año de nacimiento (Ej:2010)" min="0">
+            </div>
+            <div class="campo">
+              <label for="posicion">Su posición favorita en el campo es:</label>
+              <select id="posicion" name="posicion">
+                <option value="" disabled selected>Seleccione una posición</option>
+                <option value="Arquero">Arquero</option>
+                <option value="Defensa">Defensa</option>
+                <option value="Mediocampo">Mediocampo</option>
+                <option value="Delantero">Delantero</option>
+              </select>
+            </div>
+            <div class="campo">
+                <label for="mensaje-adicional">Mensaje adicional (opcional):</label>
+                <textarea id="mensaje-adicional" name="mensaje-adicional" placeholder="Escribe un mensaje para presentarte"></textarea>
+            </div>
+          </div>
+  
+          <div id="dinamico-tecnico" style="display: none;">
+            <div class="campo">
+              <label for="especialidad">Especialidad</label>
+              <input type="text" id="especialidad" name="especialidad" placeholder="Ejemplo: Fisioterapeuta, Entrenador">
+            </div>
+            <div class="campo">
+              <label for="experiencia">Años de experiencia: </label>
+              <input type="number" id="experiencia" name="experiencia" placeholder="Ingresa los años de experiencia" min="0">
+            </div>
+            <div class="campo">
+              <label for="mensaje-adicional-tecnico">Mensaje Adicional</label>
+              <textarea id="mensaje-adicional-tecnico" name="mensaje-adicional-tecnico" placeholder="Escribe un mensaje para presentarte" > </textarea>
+            </div>
+
+          </div>
+  
+          <!-- Caja de texto no editable -->
+          <div class="campo">
+            <label for="texto-generado">Vista previa de tu mensaje:</label>
+            <textarea id="texto-generado" name="texto-generado" readonly></textarea>
+          </div>
+  
+          <!-- Botón Enviar -->
+          <div class="campo">
+            <button type="submit" class="boton-enviar">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+
+<script>
+    document.getElementById('asunto').addEventListener('change', function () {
+  const seleccion = this.value;
+  const inscripcion = document.getElementById('dinamico-inscripcion');
+  const tecnico = document.getElementById('dinamico-tecnico');
+
+  if (seleccion === 'inscripcion-jugador') {
+    inscripcion.style.display = 'block';
+    tecnico.style.display = 'none';
+  } else if (seleccion === 'grupo-tecnico') {
+    tecnico.style.display = 'block';
+    inscripcion.style.display = 'none';
+  } else {
+    inscripcion.style.display = 'none';
+    tecnico.style.display = 'none';
+  }
+});
+
+</script>
+
+
+<script>
+    // Referencias a los elementos
+const formulario = document.getElementById('formulario-contacto');
+const asunto = document.getElementById('asunto');
+const dinamicoInscripcion = document.getElementById('dinamico-inscripcion');
+const dinamicoTecnico = document.getElementById('dinamico-tecnico');
+const textoGenerado = document.getElementById('texto-generado');
+
+// Mostrar campos dinámicos según la selección
+asunto.addEventListener('change', () => {
+  if (asunto.value === 'inscripcion-jugador') {
+    dinamicoInscripcion.style.display = 'block';
+    dinamicoTecnico.style.display = 'none';
+  } else if (asunto.value === 'grupo-tecnico') {
+    dinamicoInscripcion.style.display = 'none';
+    dinamicoTecnico.style.display = 'block';
+  } else {
+    dinamicoInscripcion.style.display = 'none';
+    dinamicoTecnico.style.display = 'none';
+  }
+});
+
+// Actualizar la caja de texto dinámica
+formulario.addEventListener('input', () => {
+  const nombre = document.getElementById('nombre').value;
+  const apellido = document.getElementById('apellido').value;
+  const nombreNino = document.getElementById('nombre-nino')?.value || '';
+  const categoria = document.getElementById('categoria')?.value || '';
+  const posicion = document.getElementById('posicion')?.value || '';
+  const mensajeAdicional = document.getElementById('mensaje-adicional')?.value || '';
+  const especialidad = document.getElementById('especialidad')?.value || '';
+  const experiencia = document.getElementById('experiencia')?.value || '';
+  const mensajeAdicionalTecnico = document.getElementById('mensaje-adicional-tecnico')?.value || '';
+
+  let mensaje = '';
+
+  if (asunto.value === 'inscripcion-jugador') {
+    mensaje = `Hola, mi nombre es ${nombre} ${apellido}. Quiero inscribir a mi hijo/a ${nombreNino}, categoría ${categoria}, y su posición favorita en el campo es ${posicion}. ¡Gracias! ${mensajeAdicional ? 'Mensaje adicional: ' + mensajeAdicional : ''}`;
+  } else if (asunto.value === 'grupo-tecnico') {
+    mensaje = `Hola, mi nombre es ${nombre} ${apellido}. Soy especialista en ${especialidad} y tengo ${experiencia} año(s) de experiencia. ¡Gracias! ${mensajeAdicionalTecnico ? 'Mensaje adicional: ' + mensajeAdicionalTecnico : ''}`;
+  }
+
+  textoGenerado.value = mensaje.trim();
+});
+
+</script>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

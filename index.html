@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Deportivo Dynamo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./Images/logo.webp">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+</head>
+<body>
+    
+<!-- Inicio Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./Images/logo.webp" alt="Logo del Club">
+    </div>
+    <ul class="nav-menu">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./noticias.html">Noticias</a></li>
+        <li class="dropdown">
+            <a href="#acerca" class="dropdown-btn">Acerca de Nosotros ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./Quienes_Somos.html">Quiénes Somos</a></li>
+                <li><a href="./Sedes_Dynamo.html">Sedes</a></li>
+                <li><a href="./Formadores.html">Formadores</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#el-club" class="dropdown-btn">El Club ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./categorias.html">Categorías</a></li>
+                <li><a href="./torneos.html">Torneos y Competencias</a></li>
+                <li><a href="./jugadoresdestacados.html">Jugadores Destacados</a></li>
+            </ul>
+        </li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    
+</nav>
+<!-- Fin Navbar -->
+     
+  <!--(Hero Section Inicio) -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h2>Club Deportivo Dynamo</h2>
+      <p>La pasión es eterna, y el coraje se vive en cada encuentro.</p>
+
+    </div>
+  </section>
+  <!--(Hero Section)Fin -->
+
+<!--(Noticias Inicio) -->
+<section class="news-section">
+  <div class="container">
+    <!-- Título de la sección -->
+    <h2 class="section-title">Últimas Noticias</h2>
+    <div class="news-grid">
+      <!-- Contenedor Izquierdo: Noticias adicionales -->
+      <div class="news-small">
+        <!-- Aquí se agregarán dinámicamente las noticias adicionales -->
+      </div>
+
+      <!-- Contenedor Derecho: Noticia Estelar -->
+      <div class="news-large">
+        <!-- Aquí se agregará dinámicamente la noticia estelar -->
+      </div>
+    </div>
+    
+    <!-- Botón para ver más noticias -->
+    <div class="news-btn-container">
+      <a href="./noticias.html" class="btn-more-news">Conoce más noticias</a>
+    </div>
+  </div>
+</section>
+
+<!--(Noticias Fin) -->
+
+<!--(Categorias Inicio) -->
+<!-- Sección de Carrusel de Categorías -->
+<section id="categorias" class="categorias-slider">
+  <h2>Categorías del Equipo</h2>
+  <!-- Contenedor del carrusel -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Tarjeta de categoría 1 -->
+
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/categoria6.webp" alt="Categoría Sub-12">
+          <h3>Sub-6</h3>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/categoria8.webp" alt="Categoría Sub-12">
+          <h3>Sub-8</h3>
+        </div>
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/categoria12.webp" alt="Categoría Sub-12">
+          <h3>Sub-10</h3>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/entrenamienot.webp" alt="Categoría Sub-12">
+          <h3>Sub-12</h3>
+        </div>
+      </div>
+
+      <!-- Tarjeta de categoría 2 -->
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/categoria15.webp" alt="Categoría Sub-15">
+          <h3>Sub-15</h3>
+        </div>
+      </div>
+
+      <!-- Tarjeta de categoría 3 -->
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/categoria16.webp" alt="Categoría Sub-17">
+          <h3>Sub-16</h3>
+        </div>
+      </div>
+      <!-- Tarjeta de categoría 4 -->
+
+      <div class="swiper-slide">
+        <div class="categoria">
+          <img src="./Images/arqueros.webp" alt="Categoría Sub-12">
+          <h3>Arqueros</h3>
+        </div>
+      </div>
+
+    </div>
+    <!-- Botones de navegación -->
+
+    <!-- Paginación -->
+  </div>
+</section>
+<!--(Categorias Fin) -->
+
+
+<!-- (Galeria Inicio) -->
+<section class="gallery-videos-section">
+    <h2 class="section-title">Galería</h2>
+    <div class="content-wrapper">
+      <!-- Galería -->
+      <div class="gallery">
+        <div class="gallery-grid">
+          <img src="galeria/1.webp" alt="Imagen 1">
+          <img src="galeria/2.webp" alt="Imagen 2">
+          <img src="galeria/3.webp" alt="Imagen 3">
+          <img src="galeria/4.webp" alt="Imagen 4">
+          <img src="galeria/5.webp" alt="Imagen 5">
+          <img src="galeria/6.webp" alt="Imagen 6">
+          <img src="galeria/7.webp" alt="Imagen 7">
+          <img src="galeria/8.webp" alt="Imagen 8">
+          <img src="galeria/9.webp" alt="Imagen 9">
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- (Galeria Fin) -->
+
+
+<!-- (Red Social Inicio) -->
+<section class="social-media-section">
+    <h2 class="section-title">Síguenos en Redes Sociales</h2>
+    <div class="social-container">
+      <!-- Facebook -->
+      <div class="facebook-container">
+        <h3 class="social-title">Facebook</h3>
+        <div class="facebook-embed">
+          <iframe 
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdynamo.decordoba.1&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="100%" 
+            height="700" 
+            style="border:none;overflow:hidden;" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+  
+      <!-- Instagram -->
+            <div class="instagram-container">
+                <h3 class="social-title">Instagram</h3>
+                <a href="https://www.instagram.com/club_deportivodynamo/" target="_blank">
+                  <img src="galeria/instragram.webp" alt="Instagram Placeholder" class="instagram-image">
+                </a>
+              </div>
+    </div>
+</section>
+<!-- (Red Social Fin) -->
+
+  
+
+<!-- Footer Inicio -->
+<footer class="site-footer">
+    <div class="footer-background"></div>
+    <div class="footer-content">
+      <!-- Patrocinadores -->
+      <div class="footer-sponsors">
+        <h3 class="footer-title">Participaciones</h3>
+        <div class="sponsors-logos">
+          <img src="sponsors/ligavallecaucana.webp" alt="Liga Vallecaucana">
+          <img src="sponsors/torneolasamericas.webp" alt="Torneo Las Américas">
+          <img src="sponsors/copababu.webp" alt="Delicias Luku">
+          <img src="sponsors/bahiacocecer.webp" alt="Bahía Soccer">
+          <img src="sponsors/images.webp" alt="Fútbol Paz">
+          <img src="sponsors/babyfutbol.webp" alt="Baby Paz">
+        </div>
+      </div>
+  
+      <!-- Redes Sociales -->
+      <div class="footer-social">
+        <h3 class="footer-title">¡Síguenos en nuestras redes sociales!</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/dynamo.decordoba.1" target="_blank">
+            <img src="./Images/facebook.webp" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/club_deportivodynamo/" target="_blank">
+            <img src="./Images/instagram.webp" alt="Instagram">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Contacto -->
+      <div class="footer-contact">
+        <p>Correo: <a href="mailto:info@clubdynamo.com">info@clubdynamo.com</a></p>
+        <p>Teléfono: 312 67323778 - 312 6746823</p>
+        <p>Dirección: Ciudad Córdoba, Cali</p>
+      </div>
+  
+      <!-- Derechos Reservados -->
+      <div class="footer-bottom">
+        <p>© 2025 Club Deportivo Dynamo. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado por <a href="#">GhostRz</a>.</p>
+      </div>
+    </div>
+</footer>
+<!-- Footer Fin -->
+
+ <script>
+  
+ </script> 
+  
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  // Configuración del carrusel Swiper
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper-container", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>
