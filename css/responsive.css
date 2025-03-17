@@ -1,0 +1,1168 @@
+@media (max-width: 768px) {
+  /* Deshabilitamos el hover en móvil para que no interfiera */
+  .dropdown:hover .dropdown-menu {
+      display: none; /* o simplemente no definas nada */
+  }
+
+ /* Ajusta la navbar para centrar el logo y manejar la hamburguesa */
+ .navbar {
+  /* Mantén la posición fixed o sticky que tenías */
+  position: fixed; /* o sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Mantén el mismo background que en desktop */
+  background: rgba(0, 0, 0, 0.9); /* o transparent, etc. */
+
+  /* Si no quieres centrar todo, podrías usar space-between: */
+  justify-content: space-between;
+  justify-content: center
+
+}
+
+ /* Logo más grande y centrado */
+  .navbar .logo img {
+      height: 100px;       /* Tamaño más grande en móvil */
+      display: block;     /* Para que margin auto funcione */
+      margin: 0 auto;     /* Centra horizontalmente la imagen */
+  }
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #1a1a1a;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+
+  .nav-menu li {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu li:last-child {
+      border-bottom: none;
+  }
+
+  .nav-menu a {
+      display: block;
+      padding: 15px;
+      text-align: left;
+      color: #fff;
+      text-decoration: none;
+      background-color: #1a1a1a;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+      background-color: #ff5722;
+  }
+
+  /* Submenú cerrado por defecto */
+  .dropdown-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: static; /* Para que aparezca debajo en mobile */
+      width: 100%;
+      z-index: 1100;
+  }
+
+  /* Si el <li class="dropdown"> tiene la clase .active, mostramos el submenú */
+  .dropdown.active .dropdown-menu {
+      display: flex;
+  }
+
+  .dropdown-menu a {
+      padding: 15px;
+      text-align: left;
+      color: #fff;
+      font-size: 0.9rem;
+      background-color: #333;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-menu a:hover {
+      background-color: #ff5722;
+  }
+
+  /* Botón Hamburguesa */
+  /* Posiciona la hamburguesa a la derecha */
+  .hamburger {
+      display: block;     /* Ahora sí se muestra en móvil */
+      position: absolute; 
+      top: 50%; 
+      right: 20px;
+      transform: translateY(-50%);
+      z-index: 1200;
+  }
+
+  .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+  }
+
+  .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;  /* más pequeño en móvil */
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 20px;
+  }
+
+  .news-small, .news-large {
+    width: 100%; /* Cada contenedor ocupa toda la fila */
+  }
+
+  .news-item2 img{
+      width: 100%; /* Cada contenedor ocupa toda la fila */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+.instagram-container {
+  width: 95%; /* Ancho más grande para ocupar casi toda la pantalla */
+  height: auto; /* Permitir ajuste automático de la altura */
+}
+
+.instagram-image {
+  height: 450px; /* Altura más grande para destacar Instagram en pantallas medianas */
+}
+
+.social-title {
+  font-size: 1.8rem; /* Incremento del tamaño del título */
+}
+
+.facebook-container{
+  width: 120%; /* Ancho más grande para ocupar casi toda la pantalla */
+  height: auto; /* Permitir ajuste automático de la altura */  
+}
+}
+
+@media (max-width: 480px) {
+.instagram-container {
+  width: 100%; /* Ancho total para pantallas pequeñas */
+  height: auto;
+}
+
+.instagram-image {
+  height: 500px; /* Aumentar la altura para pantallas más pequeñas */
+}
+
+.social-title {
+  font-size: 1.6rem; /* Ajustar ligeramente el tamaño del título */
+}
+
+.facebook-container{
+  width:100%; /* Ancho más grande para ocupar casi toda la pantalla */
+  height: auto; /* Permitir ajuste automático de la altura */ 
+}
+}
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .sponsors-logos {
+    flex-direction: column; /* Cambia la dirección de los logos a columna */
+    align-items: center;
+  }
+
+  .sponsors-logos img {
+    width: 80px; /* Reduce el tamaño de los logos */
+  }
+
+  .social-icons {
+    flex-direction: column; /* Coloca los íconos uno debajo del otro */
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 30px; /* Reduce el tamaño de los íconos */
+  }
+
+  .footer-title {
+    font-size: 1.5rem; /* Reduce el tamaño del título */
+  }
+
+  .footer-contact p {
+    font-size: 0.8rem; /* Reduce el tamaño del texto */
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem; /* Ajusta el tamaño del texto en la parte inferior */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sponsors-logos img {
+    width: 60px; /* Ajusta el tamaño de los logos para pantallas pequeñas */
+  }
+
+  .social-icons img {
+    width: 25px; /* Ajusta el tamaño de los íconos sociales */
+  }
+
+  .footer-contact p {
+    font-size: 0.75rem;
+  }
+
+  .footer-title {
+    font-size: 1.2rem; /* Reduce el título aún más en pantallas pequeñas */
+  }
+}
+
+
+/*Historia*/
+/* Pantallas medianas (tablets, < 768px) */
+@media (max-width: 768px) {
+  .historia-content,
+  .historia-invertida {
+      flex-direction: column; /* Coloca los elementos en columnas */
+  }
+
+  .historia-imagen {
+      transform: translateX(0); /* Resetea cualquier desplazamiento */
+      margin: 0 auto; /* Centra la imagen */
+  }
+
+  .historia-imagen img {
+      height: 100%;
+      width: 100%; /* Haz la imagen completamente adaptable */
+      max-width: 400px; /* Limita el ancho */
+  }
+
+  .historia-texto {
+      margin: 20px 0; /* Añade un margen arriba y abajo del texto */
+      transform: translateX(0); /* Resetea cualquier desplazamiento */
+      text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .historia-invertida .historia-texto {
+    flex: 1; /* Ajusta el ancho del texto al mismo nivel que la imagen */
+    margin: 0 auto 10px auto;/* Centra el texto */
+    transform: translateX(0); /* Elimina cualquier desplazamiento horizontal */
+    text-align: center; /* Centra el texto para mejor legibilidad */
+    padding: 2px; /* Añade un poco de espacio interno */
+}
+}
+
+/* Pantallas pequeñas (móviles, < 480px) */
+@media (max-width: 480px) {
+  .historia-titulo h2 {
+      font-size: 2rem; /* Reduce el tamaño del título */
+  }
+
+  .historia-imagen img {
+      max-width: 100%; /* Haz que la imagen ocupe todo el ancho */
+  }
+
+  .historia-texto p {
+      font-size: 1rem; /* Ajusta el texto para móviles */
+      line-height: 1.6; /* Reduce el espacio entre líneas */
+  }
+
+      .historia-invertida .historia-texto {
+      font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+      line-height: 1.6; /* Ajusta el espacio entre líneas */
+      margin: 0 auto 10px auto;
+    }
+  
+  .historia-invertida .historia-imagen img {
+      width: 100%; /* La imagen ocupa todo el ancho disponible */
+      height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+/*Mensaje Aleatorio*/
+/* Responsividad para tablets */
+@media (max-width: 768px) {
+.mensaje-section h3 {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+}
+
+.mensaje-section p {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    line-height: 1.6; /* Reduce el espacio entre líneas */
+    max-width: 90%; /* Aumenta el ancho del texto para que no esté restringido */
+}
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+.mensaje-section {
+    padding: 50px 10px; /* Reduce el padding en móviles */
+}
+
+.mensaje-section h3 {
+    margin-bottom: 15px; /* Ajusta el margen inferior */
+}
+
+.mensaje-section p {
+    line-height: 1.4; /* Reduce el espacio entre líneas */
+}
+}
+
+/*Mision, Vision, Valores*/
+/* Responsividad */
+@media (max-width: 768px) {
+.mvv-card {
+    width: 100%; /* Tarjetas ocupan todo el ancho en pantallas pequeñas */
+}
+.mvv-intro p {
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  line-height: 1.6; /* Reduce el espacio entre líneas */
+  text-align: justify;
+}
+}
+
+
+/*Galeria Actualizada*/
+/* Responsividad para tablets (ancho máximo: 768px) */
+@media (max-width: 768px) {
+.galeria-section h2 {
+    font-size: 2rem; /* Reduce ligeramente el tamaño del título */
+}
+
+.galeria-intro {
+    font-size: 1.1rem; /* Ajusta el texto de introducción */
+    line-height: 1.6; /* Reduce el espacio entre líneas */
+    max-width: 90%; /* Aumenta el ancho del texto para que se ajuste mejor */
+}
+
+.galeria-grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia la cuadrícula a 2 columnas */
+    gap: 15px; /* Reduce el espacio entre los elementos */
+}
+
+.galeria-item {
+    height: 250px; /* Reduce la altura de los contenedores */
+}
+}
+
+/* Responsividad para móviles (ancho máximo: 480px) */
+@media (max-width: 480px) {
+.galeria-section {
+    padding: 20px 10px; /* Reduce el padding general */
+}
+
+.galeria-section h2 {
+    font-size: 1.8rem; /* Reduce más el tamaño del título */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+}
+
+.galeria-intro {
+    font-size: 1rem; /* Reduce el tamaño del texto introductorio */
+    line-height: 1.5; /* Reduce aún más el espacio entre líneas */
+}
+
+.galeria-grid {
+    grid-template-columns: 1fr; /* Cambia la cuadrícula a 1 columna */
+    gap: 10px; /* Reduce el espacio entre las imágenes */
+}
+
+.galeria-item {
+    height: 200px; /* Reduce la altura de los contenedores para móviles */
+}
+
+.galeria-ver-mas button {
+    padding: 8px 15px; /* Ajusta el tamaño del botón */
+    font-size: 0.9rem; /* Reduce el tamaño del texto del botón */
+}
+}
+
+/* Responsividad para pantallas extra pequeñas (opcional, < 360px) */
+@media (max-width: 360px) {
+.galeria-section h2 {
+    font-size: 1.5rem;
+}
+
+.galeria-intro {
+    font-size: 1rem;
+    line-height: 1.5; 
+}
+
+.galeria-item {
+    height: 180px; /* Ajusta la altura para pantallas muy pequeñas */
+}
+}
+
+
+/*Responsive Formulario*/
+/* Responsividad para tablets (ancho máximo: 768px) */
+@media (max-width: 768px) {
+.formulario-section h2 {
+    font-size: 1.8rem; /* Reduce ligeramente el tamaño del título */
+}
+
+.formulario-section p {
+    font-size: 1.1rem; /* Ajusta el texto descriptivo */
+    margin-bottom: 20px; /* Reduce el margen inferior */
+}
+
+.formulario-dynamo {
+    max-width: 90%; /* Aumenta el ancho del formulario para tablets */
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-size: 0.9rem; /* Ajusta el tamaño de las etiquetas */
+}
+
+.form-group input,
+.form-group select,
+#mensaje-previa {
+    font-size: 0.95rem; /* Reduce el tamaño del texto en los campos */
+    padding: 8px; /* Ajusta el padding interno */
+}
+
+button#enviar-whatsapp {
+    padding: 8px 15px; /* Reduce el tamaño del botón */
+    font-size: 0.95rem; /* Ajusta el tamaño del texto del botón */
+}
+}
+
+/* Responsividad para móviles (ancho máximo: 480px) */
+@media (max-width: 480px) {
+.formulario-section {
+    padding: 20px 10px; /* Reduce el padding general */
+}
+
+.formulario-section h2 {
+    font-size: 1.5rem; /* Reduce más el tamaño del título */
+    margin-bottom: 15px; /* Ajusta el margen inferior */
+}
+
+.formulario-section p {
+    font-size: 1rem; /* Reduce el tamaño del texto descriptivo */
+    line-height: 1.4; /* Reduce el espacio entre líneas */
+}
+
+.formulario-dynamo {
+    max-width: 100%; /* El formulario ocupa todo el ancho disponible */
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-size: 0.85rem; /* Reduce el tamaño de las etiquetas */
+}
+
+.form-group input,
+.form-group select,
+#mensaje-previa {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto en los campos */
+    padding: 7px; /* Reduce el padding interno */
+}
+
+#mensaje-previa {
+    height: 80px; /* Reduce la altura del campo de texto */
+}
+
+button#enviar-whatsapp {
+    padding: 6px 12px; /* Reduce el tamaño del botón */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+}
+}
+
+
+/*sedes*/
+/* Responsividad */
+/* Pantallas medianas (1024px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sede-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: mapa y texto lado a lado */
+    gap: 30px; /* Espaciado entre columnas */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 20px; /* Espaciado interno para un diseño más espacioso */
+  }
+
+  .frase-destacada {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    font-size: 1.5rem; /* Aumenta el tamaño del texto para destacar */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 40px; /* Separación con el contenido siguiente */
+  }
+
+  .sede-mapa {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 300px; /* Altura fija para mantener proporción */
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+  }
+
+  .sede-texto {
+    text-align: justify; /* Mantén el texto justificado */
+    font-size: 1.1rem; /* Aumenta ligeramente el tamaño del texto */
+    line-height: 1.8; /* Mejora la separación entre líneas */
+  }
+}
+
+/* Pantallas grandes (1200px en adelante) */
+@media (min-width: 1200px) {
+  .sede-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mantén dos columnas */
+    gap: 40px; /* Espaciado amplio entre columnas */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 40px; /* Espaciado interno generoso */
+  }
+
+  .frase-destacada {
+    width: 102%; /* Ocupa todo el ancho del contenedor */
+    font-size: 2rem; /* Tamaño grande para destacar más */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 30px; /* Más separación con el contenido siguiente */
+    font-weight: bold; /* Resalta la frase */
+  }
+
+  .sede-mapa {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 400px; /* Altura más grande para pantallas grandes */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  }
+
+  .sede-texto {
+    text-align: justify; /* Mantén el texto justificado */
+    font-size: 1.2rem; /* Texto más grande para pantallas grandes */
+    line-height: 2; /* Espaciado entre líneas para mejor legibilidad */
+    padding: 10px 20px; /* Espaciado interno adicional */
+  }
+}
+
+
+
+
+
+
+/*Entreandores*/
+/* Responsivo para formadores */
+
+/* Media Queries */
+/* Media Queries para pantallas medianas */
+@media (max-width: 768px) {
+  .staff-titulo {
+    font-size: 1.8rem;
+  }
+  
+  .staff-descripcion {
+    font-size: 1rem;
+    text-align: center; /* Centra el texto para dispositivos pequeños */
+    padding: 0 10px;
+  }
+  
+  .staff-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 20px; /* Espaciado entre las tarjetas */
+  }
+  
+  .staff-card {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Ajusta la altura según el contenido */
+    padding: 15px;
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  }
+  
+  .staff-card img {
+    width: 120px; /* Tamaño reducido para móviles */
+    height: 200px; /* Altura proporcional */
+  }
+  
+  .staff-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .staff-card p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+  
+  .filtro-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  }
+  
+  /* Ajustes para pantallas medianas (tablets) */
+  @media (max-width: 1024px) {
+  .staff-titulo {
+    font-size: 2rem;
+  }
+  
+  .staff-descripcion {
+    font-size: 1.1rem;
+  }
+  
+  .staff-grid {
+    grid-template-columns: 1fr; /* Una sola columna para tablets también */
+    gap: 20px; /* Espaciado entre las tarjetas */
+  }
+  
+  .staff-card {
+    width: 90%; /* Reduce ligeramente el ancho en tablets */
+    height: auto; /* Ajusta la altura según el contenido */
+    padding: 20px;
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  }
+  
+  .staff-card img {
+    width: 150px; /* Tamaño más grande para tablets */
+    height: 250px; /* Altura proporcional */
+  }
+  }
+
+
+  /* Pantallas pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+  .staff-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 20px;
+  }
+}
+
+/* Pantallas medianas (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 30px;
+  }
+}
+
+/* Pantallas grandes (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 40px; /* Espaciado entre las tarjetas */
+  }
+}
+
+/* Pantallas extra grandes (1367px en adelante) */
+@media (min-width: 1367px) {
+  .staff-grid {
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 50px; /* Espaciado amplio */
+  }
+}
+
+/* Tamaño fijo de las tarjetas */
+.staff-card {
+  width: 300px; /* Tamaño fijo */
+  height: 420px;
+  margin: 0 auto; /* Centra las tarjetas */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.staff-card img {
+  width: 150px;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.staff-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.staff-card p {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+
+  
+
+
+
+
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+.modal-content {
+  flex-direction: column;
+  width: 95%;
+  margin: 10% auto;
+  padding: 15px;
+}
+
+.modal-info {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-info img {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.modal-text {
+  text-align: center;
+}
+
+.modal-text h3 {
+  font-size: 1.5rem;
+}
+
+.modal-text p {
+  font-size: 1rem;
+}
+
+.modal-gallery img {
+  width: 100px;
+  height: 100px;
+}
+}
+
+@media (max-width: 480px) {
+.modal-info img {
+  width: 150px;
+}
+
+.modal-text h3 {
+  font-size: 1.3rem;
+}
+
+.modal-text p {
+  font-size:  1rem;
+}
+
+.modal-gallery img {
+  width: 100px;
+  height: 100px;
+}
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+.intro-titulo {
+    font-size: 2rem;
+}
+
+.intro-descripcion {
+    font-size: 1rem;
+}
+
+.intro-imagen img {
+    max-width: 100%;
+}
+}
+
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 768px) {
+.intro-titulo {
+    font-size: 2rem;
+}
+
+.intro-descripcion {
+    font-size: 1rem;
+}
+
+.categorias-section h2 {
+    font-size: 2rem;
+}
+
+.categorias-section p {
+    font-size: 1rem;
+}
+
+.categoria-card {
+    flex-direction: column; /* Las imágenes y el contenido estarán en columnas */
+    text-align: center;
+}
+
+.categoria-imagen {
+  max-width: 100%; /* Imagen se adapta al ancho disponible */
+  height: auto; /* Mantiene proporción */
+  border-right: none; /* Quita borde derecho */
+  border-bottom: 1px solid #ddd; /* Añade borde inferior */
+  
+}
+
+.categoria-contenido {
+    text-align: center;
+    padding: 1rem;
+}
+
+.categoria-contenido p {
+    font-size: 0.85rem;
+}
+}
+
+@media (max-width: 480px) {
+.intro-titulo {
+    font-size: 1.8rem;
+}
+
+.intro-descripcion {
+    font-size: 0.9rem;
+}
+
+.categorias-section h2 {
+    font-size: 1.8rem;
+}
+
+.categorias-section p {
+    font-size: 0.9rem;
+}
+
+.categoria-contenido p {
+    font-size: 0.8rem;
+}
+
+.boton-categoria {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}
+}
+
+@media (max-width: 480px) {
+  .categoria-imagen {
+      height: auto; /* Asegura que la imagen no se deforme */
+      max-width: 100%; /* Imagen ajustada al contenedor */
+  }
+
+  .categoria-card {
+      padding: 0.5rem; /* Ajusta el espacio */
+  }
+
+  .categoria-contenido p {
+      font-size: 0.8rem; /* Reduce el tamaño del texto */
+  }
+
+/*Carrusuel*/
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+.categorias-slider h2 {
+  font-size: 2rem;
+}
+
+.swiper-container {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center; /* Centra el carrusel horizontalmente */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Centra las cartas dentro del carrusel */
+}
+
+.categoria {
+  max-width: 300px; /* Aumenta el tamaño de la carta */
+  width: 100%;
+}
+
+.categoria img {
+  height: 220px; /* Aumenta la altura de la imagen */
+}
+
+.categoria h3 {
+  font-size: 1.5rem; /* Incrementa ligeramente el tamaño del texto */
+}
+}
+
+@media (max-width: 768px) {
+.categorias-slider h2 {
+  font-size: 1.8rem;
+}
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.categoria {
+  max-width: 250px;
+  width: 100%;
+}
+
+.categoria img {
+  height: 200px;
+}
+
+.categoria h3 {
+  font-size: 1.3rem;
+}
+}
+
+@media (max-width: 480px) {
+.categorias-slider {
+  padding: 20px 10px;
+  text-align: center; /* Asegura el centrado del título */
+}
+
+.categorias-slider h2 {
+  font-size: 1.5rem;
+}
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.categoria {
+  max-width: 90%;
+  width: 100%;
+}
+
+.categoria img {
+  height: 450px; /* Ajusta la altura de la imagen */
+}
+
+.categoria h3 {
+  font-size: 1.2rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none; /* Oculta los botones en pantallas pequeñas */
+}
+}
+
+/* Estilo responsivo para pantallas grandes */
+@media (min-width: 1024px) {
+.categoria-cartas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  gap: 30px;
+  justify-items: center;
+}
+
+.categoria-carta {
+  max-width: 280px; /* Ajuste del ancho para pantallas grandes */
+}
+}
+
+/* Estilo responsivo para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+.categoria-cartas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.categoria-carta {
+  max-width: 250px; /* Ajuste del ancho para pantallas medianas */
+}
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 767px) {
+.categoria-cartas {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  gap: 15px;
+}
+
+.categoria-carta {
+  max-width: 90%; /* Las cartas ocupan casi todo el ancho disponible */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.categoria-titulo {
+  font-size: 2rem; /* Ajuste del tamaño del título */
+}
+
+.categoria-descripcion {
+  font-size: 1rem; /* Ajuste del tamaño del texto */
+}
+
+.categoria-icono {
+  font-size: 2rem; /* Reducción del tamaño del ícono */
+}
+
+.categoria-carta h3 {
+  font-size: 1.2rem; /* Ajuste del tamaño del texto del título de la carta */
+}
+
+.categoria-carta p {
+  font-size: 0.9rem; /* Ajuste del tamaño del texto descriptivo */
+}
+}
+
+/* Justificar texto en la descripción de sedes para responsive */
+@media (max-width: 768px) {
+.sedes-descripcion {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.galeria-intro
+{
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5; 
+  padding: 0 10px;
+}
+
+.galeria-intro p
+{
+  font-size: 1rem;
+  line-height: 1.8; 
+}
+.staff-descripcion{
+text-align: justify;
+font-size: 1rem;
+}
+
+.intro-descripcion{
+text-align: justify;
+font-size: 1rem;
+}
+
+.categorias-section{
+text-align: justify;
+font-size: 1rem;
+}
+
+.categorias-section h2{
+text-align: center;
+}
+
+.categoria-descripcion{
+text-align: justify;
+font-size: 1rem;
+}
+}
+
+@media (max-width: 768px) {
+.torneos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
+}
+}
+
+@media (max-width: 480px) {
+.torneos-grid {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+}
+
+.torneo-info p {
+  font-size: 1rem; /* Tamaño reducido para párrafos */
+}
+
+.torneo-info  {
+text-align: justify;
+}
+
+@media (max-width: 480px) {
+.jugadores-destacados-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.jugadores-destacados-descripcion {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0 10px; /* Reduce el padding para evitar que el texto quede muy pegado a los bordes */
+}
+}
+}
+
+
+/* Pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+  .trofeo-item {
+    width: calc(30% - 20px); /* Tres tarjetas por fila */
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 1023px) {
+  .trofeo-item {
+    width: calc(45% - 20px); /* Dos tarjetas por fila */
+  }
+
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .trofeo-item {
+    width: calc(100% - 20px); /* Una tarjeta por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .trofeos-titulo {
+    font-size: 1.5rem;
+  }
+
+  .trofeos-descripcion {
+    font-size: 1rem;
+    padding: 0 30px; /* Mayor espacio interno */
+    line-height: 1.5;
+  }
+
+  .trofeo-item:hover .trofeo-detalles {
+    display: block; /* Esto puede ser un problema */
+}
+
+}
+}
